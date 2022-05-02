@@ -14,7 +14,7 @@ def test_dynaconf():
     with pytest.raises(
         AttributeError, match="'Settings' object has no attribute 'TESTS_ENABLED'"
     ):
-        settings.tests_enabled  # pylint: disable=pointless-statement
+        settings.tests_enabled
 
     settings.configure(FORCE_ENV_FOR_DYNACONF="testing")
     assert settings.tests_enabled
