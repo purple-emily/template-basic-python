@@ -10,7 +10,6 @@ lint:
 	poetry run black --diff --check --config pyproject.toml ./src tests
 	poetry run mypy --config-file pyproject.toml ./src
 	poetry run flake8 --config=.flake8 ./src tests
-	poetry run pylint --rcfile=.pylintrc ./src tests
 	poetry check
 	poetry run safety check --full-report
 
